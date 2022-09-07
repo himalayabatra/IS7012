@@ -1,0 +1,292 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style>
+    .mainContent {
+        background-color: #D9D9D9;
+        padding-bottom:20px;
+    }
+    .mainContent h6 {
+        color:white;
+    }
+
+    #testimonials p {
+        padding:10px;
+        height:80px;
+    }
+
+    #testimonials .carousel-inner{
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    #servicesOffered .card{
+        min-height: 300px;
+    }
+    .contactDetails {
+        color:cadetblue;
+        padding: 20px;
+        margin-top:20px;
+    }
+    form{
+        padding:20px;
+    }
+    form input {
+        display: block;
+        padding:10px;
+        margin:10px;
+        width:100%;
+    }
+    .submitBtn {
+        background-color:cadetblue;
+        color:white;
+        padding:20px;
+        font-weight:bold;
+    }
+
+    h2 {
+            background-color: cadetblue;
+    color: white;
+    padding: 10px;
+    }
+    .card-title {
+        background-color:cadetblue;
+        text-align:center;
+        padding:5px;
+        color:white;
+    }
+
+    #howItWorks .row{
+    margin: 0 auto;
+    width: 80%;
+    }
+
+    #howItWorks button {
+        margin: 5px;
+         
+    }
+
+    #blogs .carousel-item{
+        height:100px;
+        background-color: burlywood;
+            display: inline-flex;
+            color:white !important;
+            justify-content: center;
+    padding: 30px 0;
+    }
+
+    #blogs .carousel-item a{
+        text-decoration: none;
+        color:black;
+        font-size:20px;
+        font-weight:bold;
+    }
+</style>
+
+<div class="container mainContent">
+    <div class="text-center">
+        <h1 class="display-4">Find your dream job now </h1>
+        <h6>Learn and Grow your Career</h6>
+    </div>
+    <div id="servicesOffered" class="mt-4">
+        <h2>Our Services</h2>
+        <div class="row mt-4">
+        <div class="col-md-3">
+        <div class="card">
+                    <div class="card-body d-flex flex-column">
+                <h5 class="card-title">RESUME DISPLAY</h5>
+                <p class="card-text">Increase your Profile Visibility to recruiters upto 3 times. <br/> Get a Featured Profile, Stand out and get noticed in recruiter eyes.</p>
+                        <a href="#" class="btn btn-primary mt-auto">KNOW MORE</a>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-3">
+        <div class="card">
+                    <div class="card-body d-flex flex-column">
+                <h5 class="card-title">PRIORITY APPLICANT</h5>
+                <p class="card-text">Be a Priority Applicant &amp; increase your chance of getting a call. <br /> Be the first one to apply and catch recruiter attention</p>
+                        <a href="#" class="btn btn-primary  mt-auto">KNOW MORE</a>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-3">
+        <div class="card">
+                    <div class="card-body d-flex flex-column">
+                <h5 class="card-title">JOB SEARCH BOOSTER</h5>
+                <p class="card-text">
+                    Boost your job search with referrals <br /> Take help from over 20,000
+                    seniors in top companies like TCS, HCL, Accenture etc.
+                </p>
+                        <a href="#" class="btn btn-primary  mt-auto">KNOW MORE</a>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-3">
+        <div class="card">
+                    <div class="card-body d-flex flex-column">
+                <h5 class="card-title">RESUME WRITING </h5>
+                <p class="card-text">
+                    Standout from the crowd with our professionally written Resume by expert <br /> Resume that highlights your strengths and showcase your experience
+                </p>
+                        <a href="#" class="btn btn-primary  mt-auto">KNOW MORE</a>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div id="specializationIndustries" class="mt-4">
+        <h2>Industries We Specialized In</h2>
+        <div class="accordion mt-4" id="accordionExample">
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Tech Companies
+                    </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Top Tech Companies Loooking to Hire</strong>
+                        <ul class="list-group">
+                            <li class="list-group-item">Google</li>
+                            <li class="list-group-item">Apple</li>
+                            <li class="list-group-item">Infosys</li>
+                            <li class="list-group-item">Accenture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Remote Jobs
+                    </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Explore Remote Jobs</strong>
+                        <ul class="list-group">
+                            <li class="list-group-item">Microsoft</li>
+                            <li class="list-group-item">Adobe</li>
+                            <li class="list-group-item">LevelAccess</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Consulting Jobs
+                    </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Consulting Companie to Watchout for</strong>
+                        <ul class="list-group">
+                            <li class="list-group-item">Deloitte</li>
+                            <li class="list-group-item">SAP</li>
+                            <li class="list-group-item">Cognizant</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="testimonials" class="carousel slide mt-4" data-bs-ride="carousel">
+        <h2>Testimonials</h2>
+        <div class="carousel-inner mt-4">
+            <div class="carousel-item active">
+                <p>
+                    <em>"I had five non-negotiable conditions: a company that inspires me, a product that I feel passionate about, a position that challenges me and stretches me into different areas, management that encourages and empowers me to do my best and great work environment and team spirit. The JobFit helped me to meet my dream recruiter."<strong>- by John</strong></em>
+                </p>
+            </div>
+            <div class="carousel-item">
+                <p>
+                    <em>"They were brilliant. They cooperated and guided me in all the steps and really helped me alot in getting my first job."<strong>- by Rita</strong></em>
+                </p>
+            </div>
+            <div class="carousel-item">
+                <p>
+                    <em>"I would really recommend JobFit to all my friends. Their career coaching and resume building services are awesome and out of the world."<strong>- by Joseph</strong></em>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            
+        <div class="card contactDetails">
+                <h3>Our Contact Details</h3>
+                <p class="col-sm-6 text-justify"><strong>Address:</strong><span class="p-2 word">Office#9, 100th floor, Empire State Building, Manhattan, NewYork</span></p>
+                <p class="col-sm-6"><strong>Contact:</strong><span class="p-2">(513) 410-5172</span></p>
+        </div>
+        </div>
+        <div class="col-md-6">
+            
+            <form action="">
+                <h3>Come join us</h3>
+        <div class="customerInfo">
+            <input type="text" name="firstname" placeholder="Firstname" />
+            <input type="text" name="lastname" placeholder="Lastname" />
+            <input type="number" name="exp" placeholder="Experience" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="text" name="skills" placeholder="Skills" />
+        </div>
+                <input type="submit" class="submitBtn" value="Begin Your Job Journey" />
+        </form>
+        </div>
+    </div>
+    <div id="howItWorks">
+        <h2>How it Works</h2>
+        <div class="row">
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+            Schedule Meeting with us
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+            Prepare Resume
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+            Prepare Cover Letter
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+            Search Job
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+            Apply Job
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+            Become Premium Member
+        </button>
+        </div>
+
+    </div>
+
+    <div id="blogs" class="carousel slide mt-4" data-bs-ride="carousel">
+        <h2>Blogs</h2>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#">Dallas-Based Signify Health to Be Acquired by CVS Health for $8B</a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#">These 5 DFW Tech Companies Raised August’s Largest Funding Rounds</a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#">Flatiron Health’s New CTO Wants Every Employee to be Empowered to Do Creative Work</a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+    </div>
+</div>
+
