@@ -1,0 +1,54 @@
+﻿@page
+@model RecruitCatBatraha.Pages.Jobtitles.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Job Title</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Jobtitle.jobtitleId" />
+            <div class="form-group">
+                <label asp-for="Jobtitle.title" class="control-label"></label>
+                <input asp-for="Jobtitle.title" class="form-control" />
+                <span asp-validation-for="Jobtitle.title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jobtitle.minimumSalary" class="control-label"></label>
+                <input asp-for="Jobtitle.minimumSalary" class="form-control" />
+                <span asp-validation-for="Jobtitle.minimumSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jobtitle.maximumSalary" class="control-label"></label>
+                <input asp-for="Jobtitle.maximumSalary" class="form-control" />
+                <span asp-validation-for="Jobtitle.maximumSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jobtitle.jobOpenings" class="control-label"></label>
+                <input asp-for="Jobtitle.jobOpenings" class="form-control" />
+                <span asp-validation-for="Jobtitle.jobOpenings" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jobtitle.requiredSkills" class="control-label"></label>
+                <input asp-for="Jobtitle.requiredSkills" class="form-control" />
+                <span asp-validation-for="Jobtitle.requiredSkills" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

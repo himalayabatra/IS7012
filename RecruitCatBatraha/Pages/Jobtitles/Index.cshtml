@@ -1,0 +1,60 @@
+﻿@page
+@model RecruitCatBatraha.Pages.Jobtitles.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Job Titles</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Jobtitle[0].title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jobtitle[0].minimumSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jobtitle[0].maximumSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jobtitle[0].jobOpenings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jobtitle[0].requiredSkills)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Jobtitle) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.minimumSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.maximumSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.jobOpenings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.requiredSkills)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.jobtitleId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.jobtitleId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.jobtitleId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
